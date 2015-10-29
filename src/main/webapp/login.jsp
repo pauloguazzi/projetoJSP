@@ -7,7 +7,7 @@
 <%@page import="java.util.Date"%>
 <%@page contentType="text/html"%>
 <%@page pageEncoding="UTF-8" %>
-<%@page errorPage="erro.jsp" isErrorPage="false" %>
+
 
 <jsp:useBean class="com.mycompany.projeto2.loginBean" id="info" scope="session"/>
 <jsp:useBean id="date" class="java.util.Date"/>
@@ -50,9 +50,9 @@
        Date t = new Date(System.currentTimeMillis());
       
         if(a.equals(b)){
-             out.println("<div><h2 style='color: blue'>"+ d + ",login bem sucedido, para " + a + " às " + t.toString() + "</h2></div>");
+             out.println("<div><h2 style='color: blue'>"+ d + ", login bem sucedido, para " + a + " às " + t.toString() + "</h2></div>");
         }
         else
-            out.println("<div><i>Acesso Negado</i></div>");
+            out.println("<div style='color: red'><i>Acesso negado</i></div>");
     } 
 %>
